@@ -1,5 +1,6 @@
-Verifiez que vous changez le nom du package de votre application
-ajouter le contenu du fichier androidmanifest.xml dans votre fichier existant dans l'application
-la premiere ligne dans la clause principale "manifest"
-et les autres dans la clause "application"
+N'oubliez pas de télécharger le fichier propre à votre application après la registrer dans le firebase 
+Verifiez que vous changez le nom du package ce qui convient avec le nom du package de votre application
+Ajouter le contenu du fichier androidmanifest.xml dans votre fichier existant dans l'application
+La premiere ligne dans la clause principale "manifest"
+Et les autres dans la clause "application"
 
