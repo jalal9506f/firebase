@@ -9,6 +9,10 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
+/**
+ * Created by jalal.hassane on 2/14/2019.
+ */
+
 public class MainActivity extends AppCompatActivity{
     private TextView textView;
     @Override
