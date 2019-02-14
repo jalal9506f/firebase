@@ -1,2 +1,5 @@
-c'est une petite application mobile qui utilise le firebase pour envoyer des notifications sur l'application
+Verifiez que vous changez le nom du package de votre application
+ajouter le contenu du fichier androidmanifest.xml dans votre fichier existant dans l'application
+la premiere ligne dans la clause principale "manifest"
+et les autres dans la clause "application"
 
