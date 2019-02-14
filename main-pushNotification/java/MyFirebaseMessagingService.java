@@ -89,7 +89,8 @@ public void sendNotifications(){
 
     Notification notification = builder.build();
     notification.sound = Uri.parse("android.resource://"
-            + getBaseContext().getPackageName() + "/" + R.raw.estornudo);// R.raw est l
+            + getBaseContext().getPackageName() + "/" + R.raw.estornudo);// R.raw est le dossier contenat les fichiers audio
+                                                                         // pour changer le son de la notification
     NotificationManager mNotificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
     mNotificationManager.notify(0, notification);
 
