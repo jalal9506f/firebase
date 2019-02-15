@@ -1,5 +1,5 @@
-Dossier "main-pushnotification": c'est un exemple pour démontrer comment le firebase aide à integrer le cloud messaging dans l'application          android
+Dossier "main-pushnotification": c'est un exemple pour démontrer comment le firebase aide à integrer le cloud messaging dans l'application android
          Fichier "Règles à ajouter 1": c'est le fichier contenat les règles à ajouter dans le build.gradle
-         Fichier "Règles à ajouter 2": c'est le fichier contenat les règles à ajouter dans le build.gradle du module de l'application                                            (app/gradle.build)
+         Fichier "Règles à ajouter 2": c'est le fichier contenat les règles à ajouter dans le build.gradle du module de l'application (app/gradle.build)
 
 Instructions-ios: les instructions pour compléter l'integration de firebase dans l'application ios
