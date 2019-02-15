@@ -1,1 +1,35 @@
-asdasdsad
+Si vous n'avez pas encore de projet Xcode, créez-en un maintenant
+
+Créez un Podfile si vous n'en avez pas:
+$ cd your-project directory
+$ pod init
+
+ajoutez les pods que vous souhaitez installer. Vous pouvez inclure un pod dans votre podfile comme ceci:
+pod 'Firebase/Core'
+
+Cela ajoutera les bibliothèques prérequises nécessaires pour que Firebase soit opérationnel dans votre application iOS, ainsi que Google Analytics pour Firebase. Une liste des pods et sous-espèces actuellement disponibles est fournie ci-dessous. Ceux-ci sont également liés dans des guides de configuration spécifiques aux fonctionnalités.
+
+Installez les pods et ouvrez le fichier .xcworkspace pour voir le projet dans Xcode.
+$ pod install
+$ open your-project.xcworkspace
+
+Téléchargez un fichier GoogleService-Info.plist à partir de la console Firebase et incluez-le dans votre application.
+
+Remarque: Si votre projet contient plusieurs identifiants d'ensemble, chaque identifiant doit être connecté à la console Firebase pour pouvoir disposer de son propre fichier GoogleService-Info.plist.
+
+Initialiser Firebase dans votre application
+La dernière étape consiste à ajouter du code d’initialisation à votre application. Vous avez peut-être déjà effectué cela dans le cadre de l’ajout de Firebase à votre application. Si vous utilisez un démarrage rapide, cela a été fait pour vous.
+
+Importez le module Firebase dans votre UIApplicationDelegate:
+SWIFT 
+import Firebase
+OBJECTIVE-C
+@import Firebase;
+
+Configurez une instance partagée FirebaseApp, généralement dans l'application de votre application: didFinishLaunchingWithOptions: méthode:
+SWIFT 
+// Use Firebase library to configure APIs
+FirebaseApp.configure()
+OBJECTIVE-C
+// Use Firebase library to configure APIs
+[FIRApp configure];
