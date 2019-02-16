@@ -1,0 +1,13 @@
+    <!-- L'application Firebase est toujours requise et doit être la première -->
+    <script src="/__/firebase/5.8.2/firebase-app.js"></script>
+
+    <!-- Ajouter des services supplémentaires que vous souhaitez utiliser -->
+    <script src="/__/firebase/5.8.2/firebase-auth.js"></script>
+    <script src="/__/firebase/5.8.2/firebase-database.js"></script>
+    <script src="/__/firebase/5.8.2/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.8.2/firebase-functions.js"></script>
+
+    <!-- Commentez (ou n'incluez pas) les services que vous ne souhaitez pas utiliser -->
+    <!-- <script src="/__/firebase/5.8.2/firebase-storage.js"></script> -->
+
+    <script src="/__/firebase/init.js"></script>
