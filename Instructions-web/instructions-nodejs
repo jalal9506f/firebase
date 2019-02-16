@@ -1,1 +1,20 @@
+Le SDK Firebase est également disponible sur npm. Si vous n'avez pas encore de fichier package.json, créez-en un via npm init. 
+Ensuite, installez le paquet firebase npm et enregistrez-le dans votre package.json:
 $ npm install firebase --save
+
+Pour utiliser le module dans votre application, demandez-le à partir de n'importe quel fichier JavaScript:
+var firebase = require("firebase");
+
+Si vous utilisez ES2015, vous pouvez importer le module à la place:
+import firebase from "firebase";
+
+Ensuite, initialisez le SDK Firebase à l’aide de l’extrait de code présenté ci-dessus, qui devrait ressembler à ceci:
+// Initialize Firebase
+// TODO: Replace with your project's customized code snippet
+var config = {
+  apiKey: "<API_KEY>",
+  authDomain: "<PROJECT_ID>.firebaseapp.com",
+  databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+  storageBucket: "<BUCKET>.appspot.com",
+};
+firebase.initializeApp(config);
