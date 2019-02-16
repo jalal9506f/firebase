@@ -12,3 +12,16 @@
   };
   firebase.initializeApp(config);
 </script>
+
+L'extrait de code contient des informations d'initialisation permettant de configurer le SDK JavaScript de Firebase pour qu'il utilise 
+l'authentification, le stockage dans le cloud, la base de données temps réel et le pare-feu dans le cloud. 
+Vous pouvez réduire la quantité de code utilisée par votre application en n'incluant que les fonctionnalités dont vous avez besoin. 
+Les composants pouvant être installés individuellement sont:
+
+firebase-app - Le client principal de firebase (requis)
+firebase-auth - Authentification Firebase (optionnel)
+firebase-database - Base de données Firebase Realtime (optionnel)
+firebase-firestore - Cloud Firestore (optionnel)
+firebase-storage - Stockage en nuage (optionnel)
+firebase-messaging - Firebase Cloud Messaging (optionnel)
+firebase-functions - Fonctions Cloud pour Firebase (optionnel)
