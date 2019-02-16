@@ -1,0 +1,16 @@
+// Initialiser l'application par défaut
+firebase.initializeApp(defaultAppConfig);
+
+// Initialiser une autre application avec une configuration différente
+var otherApp = firebase.initializeApp(otherAppConfig, "other");
+
+console.log(firebase.app().name);  // "[DEFAULT]"
+console.log(otherApp.name);        // "other"
+
+// Utilisez la notation abrégée pour récupérer les services de l'application par défaut
+var defaultStorage = firebase.storage();
+var defaultDatabase = firebase.database();
+
+// Utilisez la variable otherApp pour récupérer les services de l'autre application
+var otherStorage = otherApp.storage();
+var otherDatabase = otherApp.database();
