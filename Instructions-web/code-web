@@ -28,17 +28,17 @@ firebase-functions - Fonctions Cloud pour Firebase (optionnel)
 
 À partir du CDN, incluez les composants individuels dont vous avez besoin (commencez par inclure firebase-app):
 
-<!-- Firebase App is always required and must be first -->
+<!-- L'application Firebase est toujours requise et doit être la première -->
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
 
-<!-- Add additional services that you want to use -->
+<!-- Ajouter des services supplémentaires que vous souhaitez utiliser -->
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-functions.js"></script>
 
-<!-- Comment out (or don't include) services that you don't want to use -->
+<!-- Commentez (ou n'incluez pas) les services que vous ne souhaitez pas utiliser -->
 <!-- <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-storage.js"></script> -->
 
 <script>
@@ -50,17 +50,17 @@ firebase-functions - Fonctions Cloud pour Firebase (optionnel)
 
 Si vous utilisez un bundle tel que Browserify ou Webpack, vous pouvez simplement require() les composants que vous utilisez:
 
-// Firebase App is always required and must be first
+// L'application Firebase est toujours requise et doit être la première
 var firebase = require("firebase/app");
 
-// Add additional services that you want to use
+// Ajouter des services supplémentaires que vous souhaitez utiliser
 require("firebase/auth");
 require("firebase/database");
 require("firebase/firestore");
 require("firebase/messaging");
 require("firebase/functions");
 
-// Comment out (or don't require) services that you don't want to use
+// Commentez (ou n'avez pas besoin) de services que vous ne voulez pas utiliser
 // require("firebase/storage");
 
 var config = {
