@@ -1,0 +1,12 @@
+// Initialiser l'application par défaut
+var defaultApp = firebase.initializeApp(defaultAppConfig);
+
+console.log(defaultApp.name);  // "[DEFAULT]"
+
+// Vous pouvez récupérer des services via la variable defaultApp...
+var defaultStorage = defaultApp.storage();
+var defaultDatabase = defaultApp.database();
+
+// ... ou vous pouvez utiliser la notation abrégée équivalente
+defaultStorage = firebase.storage();
+defaultDatabase = firebase.database();
