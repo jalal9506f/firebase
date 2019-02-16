@@ -1,3 +1,8 @@
+Avertissement: Ces instructions vous permettent d'utiliser le SDK Firebase en tant que client pour l'accès utilisateur final 
+(par exemple, dans un poste de travail Node.js ou une application IoT). 
+Si vous souhaitez plutôt avoir un accès administrateur à partir d'un environnement privilégié (tel qu'un serveur), 
+vous devez plutôt suivre les instructions de configuration du kit SDK Admin Node.js.
+
 Le SDK Firebase est également disponible sur npm. Si vous n'avez pas encore de fichier package.json, créez-en un via npm init. 
 Ensuite, installez le paquet firebase npm et enregistrez-le dans votre package.json:
 $ npm install firebase --save
