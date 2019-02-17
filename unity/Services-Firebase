@@ -1,0 +1,11 @@
+Firebase service	               Unity package
+AdMob	                           Distributed separately in the AdMob Unity Plugin
+Analytics	                       FirebaseAnalytics.unitypackage
+Authentication	                 FirebaseAuth.unitypackage
+Realtime Database	               FirebaseDatabase.unitypackage
+Dynamic Links	                   FirebaseDynamicLinks.unitypackage
+Cloud Functions	                 FirebaseFunctions.unitypackage
+Invites	                         FirebaseInvites.unitypackage
+Cloud Messaging	                 FirebaseMessaging.unitypackage
+Remote Config	                   FirebaseRemoteConfig.unitypackage
+Cloud Storage	                   FirebaseStorage.unitypackage
