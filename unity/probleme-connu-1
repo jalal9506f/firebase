@@ -8,7 +8,7 @@ Par conséquent, les versions 5.4.0 et ultérieures du SDK Firebase Unity fourni
 
 Si vous importez un plug-in Firebase incompatible avec la version .NET activée dans votre projet, des erreurs de compilation 
 provenant de certains types du framework .NET sont implémentées par le kit de développement logiciel Parse.
-
+ 
 Pour résoudre l'erreur de compilation, si vous utilisez .NET 3.x:
   1.Supprimez ou désactivez les DLL suivantes pour toutes les plateformes:
     Parse/Plugins/dotNet45/Unity.Compat.dll
