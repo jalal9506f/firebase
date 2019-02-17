@@ -8,7 +8,7 @@ de types qui transmettent les types Parse (par exemple, l'implémentation Parse 
 Malheureusement, IL2CPP (un transpiler qui convertit C # en C ++) fourni dans Unity 2017.1.x ne traite pas correctement les DLL 
 de transfert de types, ce qui entraîne des erreurs de génération semblables à celles-ci.
 
-Fatal error in Unity CIL Linker Mono.Cecil.ResolutionException: Failed to
+Fatal error in Unity CIL Linker Mono.Cecil.ResolutionException: Failed to 
 resolve System.Threading.Tasks.TaskCompletionSource`1<T>
 
 Aucune solution de contournement n'est actuellement disponible pour les erreurs de génération .NET 4.x IL2CPP dans 
