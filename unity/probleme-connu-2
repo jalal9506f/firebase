@@ -13,4 +13,4 @@ resolve System.Threading.Tasks.TaskCompletionSource`1<T>
 
 Aucune solution de contournement n'est actuellement disponible pour les erreurs de génération .NET 4.x IL2CPP dans 
 Unity 2017.1. Vous devez donc effectuer une mise à niveau vers Unity 2017.2 ou une version ultérieure pour utiliser .NET 4.x 
-dans les projets compilés avec IL2CPP.
+dans les projets compilés avec IL2CPP. 
