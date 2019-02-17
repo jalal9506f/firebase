@@ -15,7 +15,7 @@ Pour résoudre l'erreur de compilation, si vous utilisez .NET 3.x:
     Parse/Plugins/dotNet45/Unity.Tasks.dll
   2.Activez les DLL suivantes pour toutes les plates-formes:
     Parse/Plugins/Unity.Compat.dll
-    Parse/Plugins/Unity.Tasks.dll
+    Parse/Plugins/Unity.Tasks.dll 
  
 Pour résoudre l’erreur de compilation, si vous utilisez .NET 4.x:
   1.Supprimez ou désactivez les DLL suivantes pour toutes les plateformes:
