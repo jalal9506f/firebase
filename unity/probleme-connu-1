@@ -1,0 +1,10 @@
+// Compatibilité .NET lors de l'utilisation de Unity 2017.x et versions ultérieures
+// Firebase prend en charge .NET 4.x en tant qu'option de construction expérimentale dans Unity 2017 et versions ultérieures.
+// Les plugins Firebase utilisent des composants du kit de développement logiciel Parse pour fournir des classes .NET 4.x dans des
+// versions antérieures de .NET.
+
+// Par conséquent, les versions 5.4.0 et ultérieures du SDK Firebase Unity fournissent des plug-ins compatibles avec .NET 3.x ou
+// .NET 4.x dans les répertoires dotnet3 et dotnet4 du SDK Firebase Unity.
+
+// Si vous importez un plug-in Firebase incompatible avec la version .NET activée dans votre projet, des erreurs de compilation 
+// provenant de certains types du framework .NET sont implémentées par le kit de développement logiciel Parse.
