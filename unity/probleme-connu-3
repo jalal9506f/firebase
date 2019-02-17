@@ -1,0 +1,8 @@
+Unity 2017.2 networking
+
+La base de données en temps réel Firebase crée des connexions réseau TLS à l'aide de la pile réseau .NET. La fonctionnalité TLS 
+est interrompue dans Unity 2017.2 lors de l'utilisation de .NET 4.6, ce qui entraîne l'échec du plug-in Realtime Database dans 
+les éditeurs et sur le bureau.
+
+Il n'existe aucune solution de contournement à ce problème. Vous devez donc utiliser une version différente de Unity,
+par exemple la version 2017.1 ou 2017.3.
