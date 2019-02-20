@@ -1,0 +1,15 @@
+Dans la plupart des cas, il vous suffit d'initialiser une seule application par défaut. Vous pouvez accéder aux services 
+de cette application de deux manières équivalentes:
+
+// Initialiser l'application par défaut 
+var defaultApp = admin.initializeApp(defaultAppConfig);
+
+console.log(defaultApp.name);  // '[DEFAULT]'
+
+// Récupérer des services via la variable defaultApp...
+var defaultAuth = defaultApp.auth();
+var defaultDatabase = defaultApp.database();
+
+// ...ou utilisez la notation abrégée équivalente
+defaultAuth = admin.auth();
+defaultDatabase = admin.database();
