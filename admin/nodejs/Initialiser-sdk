@@ -1,0 +1,11 @@
+Une fois que vous avez créé un projet de console Firebase et téléchargé un fichier JSON avec les informations d'identification 
+de votre compte de service, vous pouvez initialiser le SDK avec l'extrait de code suivant:
+
+var admin = require('firebase-admin');
+
+var serviceAccount = require('path/to/serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
+});
