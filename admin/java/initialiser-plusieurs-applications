@@ -1,0 +1,12 @@
+// Initialiser l'application par défaut
+FirebaseApp defaultApp = FirebaseApp.initializeApp(defaultOptions);
+
+System.out.println(defaultApp.getName());  // "[DEFAULT]"
+
+// Récupérer des services en passant la variable defaultApp...
+FirebaseAuth defaultAuth = FirebaseAuth.getInstance(defaultApp);
+FirebaseDatabase defaultDatabase = FirebaseDatabase.getInstance(defaultApp);
+
+// ... ou utilisez la notation abrégée équivalente
+defaultAuth = FirebaseAuth.getInstance();
+defaultDatabase = FirebaseDatabase.getInstance();
