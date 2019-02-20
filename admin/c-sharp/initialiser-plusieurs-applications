@@ -1,0 +1,12 @@
+// Initialiser l'application par défaut
+var defaultApp = FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.GetApplicationDefault(),
+});
+Console.WriteLine(defaultApp.Name); // "[DEFAULT]"
+
+// Récupérer des services en passant la variable defaultApp...
+var defaultAuth = FirebaseAuth.GetAuth(defaultApp);
+
+// ... ou utilisez la notation abrégée équivalente
+defaultAuth = FirebaseAuth.DefaultInstance;
