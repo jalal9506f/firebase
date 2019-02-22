@@ -6,3 +6,71 @@ FirebaseOptions options = new FirebaseOptions.Builder()
     .build();
 
 FirebaseApp.initializeApp(options);
+
+Vous pouvez trouver le nom de votre base de données sur la page Base de données de votre projet de console Firebase.
+
+Si le fichier du compte de service ne peut pas être référencé, le SDK Admin Node.js peut accepter les champs individuels du compte 
+de service en ligne:
+admin.initializeApp({
+  credential: admin.credential.cert({
+    projectId: '<PROJECT_ID>',
+    clientEmail: 'foo@<PROJECT_ID>.iam.gserviceaccount.com',
+    privateKey: '-----BEGIN PRIVATE KEY-----\n<KEY>\n-----END PRIVATE KEY-----\n'
+  }),
+  databaseURL: 'https://<DATABASE_NAME>.firebaseio.com'
+});
+
+Les kits SDK d’administration peuvent également être authentifiés avec un type d’identifiant différent. 
+Par exemple, si vous exécutez votre code dans Google Cloud Platform, vous pouvez utiliser les informations d'identification par défaut 
+de l'application Google pour que les kits de développement logiciels eux-mêmes récupèrent un compte de service pour votre compte:
+
+FirebaseOptions options = new FirebaseOptions.Builder()
+    .setCredentials(GoogleCredentials.getApplicationDefault())
+    .setDatabaseUrl("https://<DATABASE_NAME>.firebaseio.com/")
+    .build();
+
+FirebaseApp.initializeApp(options);
+
+Si vous utilisez une machine virtuelle Google Compute Engine avec les informations d'identification par défaut de Google Application 
+pour la base de données en temps réel ou l'authentification, veillez également à définir les bonnes étendues d'accès. 
+Pour la base de données et l'authentification en temps réel, vous avez besoin d'étendues se terminant par userinfo.email et soit 
+cloud-platform ou firebase.database. Pour vérifier les portées d'accès existantes et les modifier, exécutez les commandes suivantes 
+à l'aide de gcloud.
+
+# Check the existing access scopes
+gcloud compute instances describe [INSTANCE_NAME] --format json
+
+# The above command returns the service account information. For example:
+  "serviceAccounts": [
+   {
+    "email": "your.gserviceaccount.com",
+    "scopes": [
+     "https://www.googleapis.com/auth/cloud-platform",
+     "https://www.googleapis.com/auth/userinfo.email"
+     ]
+    }
+  ],
+
+# Stop the VM, then run the following command, using the service account
+# that gcloud returned when you checked the scopes.
+
+gcloud compute instances set-service-account [INSTANCE_NAME] --service-account "your.gserviceaccount.com" --scopes "https://www.googleapis.com/auth/firebase.database,https://www.googleapis.com/auth/userinfo.email"
+
+Les kits SDK d'administration fournissent également des informations d'identification qui vous permettent de vous authentifier 
+avec un jeton d'actualisation Google OAuth2:
+
+FileInputStream refreshToken = new FileInputStream("path/to/refreshToken.json");
+
+FirebaseOptions options = new FirebaseOptions.Builder()
+    .setCredentials(GoogleCredentials.fromStream(refreshToken))
+    .setDatabaseUrl("https://<DATABASE_NAME>.firebaseio.com/")
+    .build();
+
+FirebaseApp.initializeApp(options);
+
+Le SDK peut également être initialisé sans paramètre. Dans ce cas, le SDK utilise les informations d'identification par défaut 
+de l'application Google et lit les options de la variable d'environnement FIREBASE_CONFIG. Si le contenu de la variable 
+FIREBASE_CONFIG commence par un {, il sera analysé comme un objet JSON. Sinon, le SDK suppose que la chaîne est le nom d'un fichier 
+JSON contenant les options.
+
+FirebaseApp.initializeApp();
