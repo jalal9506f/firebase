@@ -7,3 +7,6 @@ dependencies {
 
 Pour utiliser le module dans votre application, demandez-le à partir de n'importe quel fichier JavaScript:
 var admin = require('firebase-admin');
+
+Si vous utilisez ES2015, vous pouvez importer le module à la place:
+import * as admin from 'firebase-admin';
