@@ -46,7 +46,7 @@ gcloud compute instances describe [INSTANCE_NAME] --format json
     "email": "your.gserviceaccount.com",
     "scopes": [
      "https://www.googleapis.com/auth/cloud-platform",
-     "https://www.googleapis.com/auth/userinfo.email"
+     "https://www.googleapis.com/auth/userinfo.email" 
      ]
     }
   ],
