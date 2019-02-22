@@ -1,1 +1,2 @@
+Le kit de développement Go Admin peut être installé à l'aide de l'utilitaire go get:
 $ go get firebase.google.com/go
