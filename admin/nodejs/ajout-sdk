@@ -1,3 +1,9 @@
 Le SDK Firebase Admin Node.js est disponible sur npm. Si vous n'avez pas encore de fichier package.json, créez-en un via npm init. 
 Ensuite, installez le paquet npm firebase-admin et enregistrez-le dans votre package.json:
 $ npm install firebase-admin --save
+
+Pour utiliser le module dans votre application, demandez-le à partir de n'importe quel fichier JavaScript:
+var admin = require('firebase-admin');
+
+Si vous utilisez ES2015, vous pouvez importer le module à la place:
+import * as admin from 'firebase-admin';
