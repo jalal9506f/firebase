@@ -5,4 +5,5 @@ dependencies {
   implementation 'com.google.firebase:firebase-admin:6.7.0'
 }
 
-
+Pour utiliser le module dans votre application, demandez-le à partir de n'importe quel fichier JavaScript:
+var admin = require('firebase-admin');
