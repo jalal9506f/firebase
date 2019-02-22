@@ -1,1 +1,10 @@
+Le Kit de développement .NET Admin SDK peut être installé à l'aide du gestionnaire de packages .NET:
 $ Install-Package FirebaseAdmin -Version 1.0.0
+
+Vous pouvez également l'installer à l'aide de l'utilitaire de ligne de commande dotnet:
+$ dotnet add package FirebaseAdmin --version 1.0.0
+
+Ou, vous pouvez l'installer en ajoutant l'entrée de référence de package suivante à votre fichier .csproj:
+<ItemGroup>
+  <PackageReference Include="FirebaseAdmin" Version="1.0.0" />
+</ItemGroup>
