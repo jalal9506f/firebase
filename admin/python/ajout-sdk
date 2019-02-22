@@ -1,1 +1,5 @@
+Le SDK Python Admin de Firebase est disponible via pip. Vous pouvez installer la bibliothèque pour tous les utilisateurs via sudo:
 $ sudo pip install firebase-admin
+
+Ou, vous pouvez installer la bibliothèque uniquement pour l'utilisateur actuel en passant l'indicateur --user:
+$ pip install --user firebase-admin
