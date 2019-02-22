@@ -10,3 +10,25 @@ FirebaseDatabase defaultDatabase = FirebaseDatabase.getInstance(defaultApp);
 // ... ou utilisez la notation abrégée équivalente
 defaultAuth = FirebaseAuth.getInstance();
 defaultDatabase = FirebaseDatabase.getInstance();
+
+Certains cas d'utilisation vous obligent à créer plusieurs applications en même temps. Par exemple, vous souhaiterez peut-être 
+lire les données de la base de données Realtime d'un projet Firebase et créer des jetons personnalisés pour un autre projet. 
+Ou vous voudrez peut-être authentifier deux applications avec des informations d'identification distinctes. Le SDK Firebase vous 
+permet de créer plusieurs applications en même temps, chacune avec ses propres informations de configuration.
+
+// Initialize the default app
+FirebaseApp defaultApp = FirebaseApp.initializeApp(defaultOptions);
+
+// Initialize another app with a different config
+FirebaseApp otherApp = FirebaseApp.initializeApp(otherAppConfig, "other");
+
+System.out.println(defaultApp.getName());  // "[DEFAULT]"
+System.out.println(otherApp.getName());    // "other"
+
+// Use the shorthand notation to retrieve the default app's services
+FirebaseAuth defaultAuth = FirebaseAuth.getInstance();
+FirebaseDatabase defaultDatabase = FirebaseDatabase.getInstance();
+
+// Use the otherApp variable to retrieve the other app's services
+FirebaseAuth otherAuth = FirebaseAuth.getInstance(otherApp);
+FirebaseDatabase otherDatabase = FirebaseDatabase.getInstance(otherApp);
