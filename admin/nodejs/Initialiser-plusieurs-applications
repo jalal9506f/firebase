@@ -13,3 +13,25 @@ var defaultDatabase = defaultApp.database();
 // ...ou utilisez la notation abrégée équivalente
 defaultAuth = admin.auth();
 defaultDatabase = admin.database();
+
+Certains cas d'utilisation vous obligent à créer plusieurs applications en même temps. Par exemple, vous souhaiterez peut-être lire 
+les données de la base de données Realtime d'un projet Firebase et créer des jetons personnalisés pour un autre projet. 
+Ou vous voudrez peut-être authentifier deux applications avec des informations d'identification distinctes. Le SDK Firebase vous permet 
+de créer plusieurs applications en même temps, chacune avec ses propres informations de configuration.
+
+// Initialize the default app
+admin.initializeApp(defaultAppConfig);
+
+// Initialize another app with a different config
+var otherApp = admin.initializeApp(otherAppConfig, 'other');
+
+console.log(admin.app().name);  // '[DEFAULT]'
+console.log(otherApp.name);     // 'other'
+
+// Use the shorthand notation to retrieve the default app's services
+var defaultAuth = admin.auth();
+var defaultDatabase = admin.database();
+
+// Use the otherApp variable to retrieve the other app's services
+var otherAuth = otherApp.auth();
+var otherDatabase = otherApp.database();
